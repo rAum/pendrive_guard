@@ -1,10 +1,10 @@
-# Pendrive Guard
+# ![Pendrive Guard logo](pendriveGuard.png) Pendrive Guard 
 
 ## What?
 
 This is a project done in my spare time as **a teenager in ~2008.** It was my protection from usb drive infections - much better than existing antiviruses at that time!
 
-It is for _archive and nostalgy reason_. 
+It is for _archive and nostalgy reason_.
 
 Code was kept on gmail as attachment (pre-gdrive/gitlab era...) and lost access as was unable to download it due to some policy. Miraculously, recently discovered workaround to retrieve it using mobile, so here it is.
 
