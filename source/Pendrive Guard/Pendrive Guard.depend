@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1237406362 source:d:\documents and settings\piotr\moje dokumenty\visual studio 2008\projects\pendrive guard\pendrive guard\cdisk.cpp
+	"CDisk.h"
+	"CScanner.h"
+
+1235648174 d:\documents and settings\piotr\moje dokumenty\visual studio 2008\projects\pendrive guard\pendrive guard\cdisk.h
+	"pch.h"
+
+1237403402 d:\documents and settings\piotr\moje dokumenty\visual studio 2008\projects\pendrive guard\pendrive guard\pch.h
+	<windows.h>
+	<Shlwapi.h>
+	<WinIoCtl.h>
+	<Dbt.h>
+	"richedit.h"
+	<string>
+	<vector>
+	<stack>
+	<map>
+	<cstdio>
+	<sstream>
+	<cassert>
+	"StringUtils.h"
+	"md5/md5wrapper.h"
+	"Utils/CSingleton.h"
+	"resource.h"
+	<commctrl.h>
+
+1237406295 d:\documents and settings\piotr\moje dokumenty\visual studio 2008\projects\pendrive guard\pendrive guard\stringutils.h
+	"pch.h"
+
+1235468400 d:\documents and settings\piotr\moje dokumenty\visual studio 2008\projects\pendrive guard\pendrive guard\md5\md5wrapper.h
+	<string>
+
+1237406220 d:\documents and settings\piotr\moje dokumenty\visual studio 2008\projects\pendrive guard\pendrive guard\utils\csingleton.h
+	<cassert>
+
+1237401555 d:\documents and settings\piotr\moje dokumenty\visual studio 2008\projects\pendrive guard\pendrive guard\resource.h
+
+1237364078 d:\documents and settings\piotr\moje dokumenty\visual studio 2008\projects\pendrive guard\pendrive guard\cscanner.h
+	"pch.h"
+

@@ -1,0 +1,101 @@
+#include "resource.h"
+#include <windows.h>
+#include <commctrl.h>
+
+LANGUAGE 21, SUBLANG_DEFAULT
+IDD_VIRUSFOUND DIALOG DISCARDABLE 0, 0, 285, 99
+STYLE DS_3DLOOK | DS_CENTER | DS_MODALFRAME | DS_SETFOREGROUND | DS_SHELLFONT | WS_VISIBLE | WS_BORDER | WS_CAPTION | WS_DLGFRAME | WS_POPUP | WS_SYSMENU
+EXSTYLE WS_EX_WINDOWEDGE | WS_EX_TOOLWINDOW | WS_EX_TOPMOST | WS_EX_LEFTSCROLLBAR | WS_EX_STATICEDGE
+CAPTION "Pendrive Guard::Znaleziono potencjalnego wirusa!"
+FONT 8, "MS Shell Dlg 2"
+BEGIN
+    DEFPUSHBUTTON   "Usuñ", IDC_DELETE, 7, 77, 50, 15, BS_DEFPUSHBUTTON
+    PUSHBUTTON      "Nie podejmuj akcji", IDC_NOACTION, 57, 77, 70, 15, BS_PUSHBUTTON
+    //PUSHBUTTON      "Dodaj wyj¹tek", IDC_ADDEXCEPTION, 127, 77, 55, 15, BS_PUSHBUTTON
+    LTEXT           "Znaleziono potencjalnego wirusa!", IDC_TEXT1, 12, 12, 108, 12, SS_LEFT, WS_EX_TRANSPARENT
+    LTEXT           "", IDC_VIRUSNAME, 12, 27, 160, 30, SS_LEFT, WS_EX_TRANSPARENT
+    LTEXT           "Co mam zrobiæ z tym ³obuzem?", IDC_TEXT2, 12, 62, 98, 8, SS_LEFT, WS_EX_TRANSPARENT
+    CONTROL         IDB_VIRUS, IDC_STATIC, WC_STATIC, SS_BITMAP, 192, 7, 85, 79, WS_EX_TRANSPARENT
+END
+
+LANGUAGE LANG_POLISH, SUBLANG_POLISH_POLAND
+IDD_SCANDIALOG DIALOG DISCARDABLE 0, 0, 184, 68
+STYLE DS_3DLOOK | DS_CENTER | DS_MODALFRAME | DS_SETFOREGROUND | DS_SHELLFONT | WS_VISIBLE | WS_BORDER | WS_CAPTION | WS_DLGFRAME | WS_POPUP | WS_SYSMENU
+EXSTYLE WS_EX_WINDOWEDGE | WS_EX_TOOLWINDOW | WS_EX_TOPMOST | WS_EX_LEFTSCROLLBAR | WS_EX_STATICEDGE
+CAPTION "Pendrive Guard::Skanowanie"
+FONT 8, "Ms Shell Dlg 2"
+BEGIN
+    DEFPUSHBUTTON   "Skanuj", IDOK, 7, 47, 50, 14, BS_DEFPUSHBUTTON
+    //CONTROL         " ", IDC_SCANPROGRESS, PROGRESS_CLASS, PBS_SMOOTH, 7, 27, 170, 15, WS_EX_DLGMODALFRAME
+    LTEXT           "Kliknij przycisk skanuj aby rozpocz¹æ skanowanie wszystkich dysków.", IDC_TEXT3, 7, 7, 170, 20, SS_LEFT
+    DEFPUSHBUTTON   "Zamknij", IDCANCEL, 127, 47, 50, 14, BS_DEFPUSHBUTTON
+    CONTROL         "", IDC_SCANPROGRESS, PROGRESS_CLASS, PBS_SMOOTH, 7, 26, 170, 15, WS_EX_DLGMODALFRAME
+END
+
+//
+// Bitmap resources
+//
+LANGUAGE 21, SUBLANG_DEFAULT
+IDB_VIRUS          BITMAP         ".\\virus.bmp"
+
+
+LANGUAGE 21, SUBLANG_DEFAULT
+IDB_BUTTONBKG      BITMAP         ".\\btn.bmp"
+
+
+LANGUAGE 21, SUBLANG_DEFAULT
+IDB_LOGO           BITMAP         ".\\pg.bmp"
+
+
+
+//
+// Icon resources
+//
+LANGUAGE 21, SUBLANG_DEFAULT
+IDI_PROGRAM16      ICON           ".\\pg16.ico"
+
+
+LANGUAGE 21, SUBLANG_DEFAULT
+IDI_PROGRAM        ICON           ".\\pendriveGuard.ico"
+
+
+
+//
+// Menu resources
+//
+LANGUAGE 21, SUBLANG_DEFAULT
+IDR_MENU1 MENU
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "Skanuj dyski wymienne", IDM_SKANUJ_DYSKI_WYMIENNE1
+        MENUITEM "Przywróæ", IDM_PRZYWR__1
+		MENUITEM "Zamknij", IDM_ZAMKNIJ1
+    END
+END
+
+//
+// Version Information resources
+//
+LANGUAGE 21, SUBLANG_DEFAULT
+1 VERSIONINFO
+    FILEVERSION     1,1,0,0
+    PRODUCTVERSION  1,0,0,0
+    FILEOS          VOS__WINDOWS32
+    FILETYPE        VFT_APP
+{
+    BLOCK "StringFileInfo"
+    {
+        BLOCK "0415fde9"
+        {
+            VALUE "Comments", "Pendrive Guard"
+            VALUE "CompanyName", "rAum Soft"
+            VALUE "FileDescription", "Detects and deletes viruses on portable media (eg. flash drive)"
+            VALUE "LegalCopyright", "Freeware"
+        }
+    }
+    BLOCK "VarFileInfo"
+    {
+        VALUE "Translation", 1045, 65001
+    }
+}
